@@ -1,0 +1,26 @@
+.navbar
+  .navbar-inner
+    .container
+      %a(class="brand" href="#") Jenkins Asia
+      .nav-collapse.collapse.navbar-responsive-collapse
+        %ul.nav.pull-right
+          / Setting
+          %li.dropdown
+            %a( class="dropdown-toggle" 
+                data-toggle="dropdown" 
+                href="#" 
+                data-original-title="Settings" 
+                rel="tooltip" 
+                data-placement="bottom")
+              %i.icon-cog
+            %ul.dropdown-menu
+              %li
+                %a Action
+          / Sign out
+          %li
+            %a( data-method="delete" 
+                href=destroy_user_session_path 
+                data-original-title="Sign Out" 
+                rel="tooltip" 
+                data-placement="bottom")
+              %i.icon-off
