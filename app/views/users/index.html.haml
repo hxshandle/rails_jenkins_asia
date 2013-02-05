@@ -1,0 +1,4 @@
+%h1 Users#index
+%ul
+  - @user.each do |user|
+    %li= link_to user.name, user

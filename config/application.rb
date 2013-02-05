@@ -31,13 +31,13 @@ module RailsJenkinsAisa
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    # config.i18n.default_locale = :Configure
 
-    # Configure the default encoding used in templates for Ruby 1.9.
+    # de the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
-    config.filter_parameters += [:password]
+    config.filter_parameters += [:password,:password_confirmation]
 
     # Use SQL instead of Active Record's schema dumper when creating the database.
     # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -55,5 +55,21 @@ module RailsJenkinsAisa
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Don't generate RSpec tests for views and helpers
+    config.generators do |g|
+        g.view_specs false
+        g.helper_specs false
+    end
+
+    # Load local env
+    config.before_configuration do
+      env_file = File.join(Rails.root, 'config', 'local_env.yml')
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
+
   end
+
 end
