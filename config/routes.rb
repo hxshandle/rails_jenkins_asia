@@ -1,4 +1,6 @@
 RailsJenkinsAisa::Application.routes.draw do
+  resources :projects
+
   get "users/index"
 
   get "users/show"
@@ -8,6 +10,8 @@ RailsJenkinsAisa::Application.routes.draw do
   end
   
   root :to => 'home#index'
+
+  match "index", :to => 'home#index'
 
   devise_for :users
   resources :users
