@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @project.name
+%p
+  %b Description:
+  = @project.description
+%p
+  %b Projectno:
+  = @project.projectNo
+%p
+  %b Targetfob:
+  = @project.targetfob
+%p
+  %b Startdate:
+  = @project.startDate
+%p
+  %b Enddate:
+  = @project.endDate
+%p
+  %b Realenddate:
+  = @project.realEndDate
+%p
+  %b Isvalid:
+  = @project.isValid
+
+= link_to 'Edit', edit_project_path(@project)
+\|
+= link_to 'Back', projects_path

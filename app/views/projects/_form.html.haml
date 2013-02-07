@@ -1,0 +1,15 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :description
+    = f.input :projectNo
+    = f.input :targetfob
+    = f.input :startDate
+    = f.input :endDate
+    = f.input :realEndDate
+    = f.input :isValid
+
+  .form-actions
+    = f.button :submit
