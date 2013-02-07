@@ -11,6 +11,9 @@ gem 'jquery-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+# Form
+gem 'simple_form'
+
 #User system
 gem 'devise'
 
