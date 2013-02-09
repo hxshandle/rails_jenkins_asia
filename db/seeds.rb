@@ -10,3 +10,8 @@ puts 'SETTING UP DEFAULT USER LOGIN'
 user = User.create! :name => 'sysadmin', :email => 'sysadmin@example.com', :password => '!qaz2wsx', :password_confirmation => '!qaz2wsx'
 user2 = User.create! :name => 'mgrlv1', :email => 'mgrlv1@example.com', :password => '!qaz2wsx', :password_confirmation => '!qaz2wsx'
 puts 'New user created: ' << user.name
+
+puts 'Setting up default project level'
+lv1 = ProjectLevel.create! :name => "All New"
+lv2 = ProjectLevel.create! :name => "Innovation"
+lv3 = ProjectLevel.create! :name => "Cosmetics"

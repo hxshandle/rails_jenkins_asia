@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130207075227) do
+ActiveRecord::Schema.define(:version => 20130209034459) do
 
   create_table "project_levels", :force => true do |t|
     t.string   "name"
@@ -27,9 +27,10 @@ ActiveRecord::Schema.define(:version => 20130207075227) do
     t.date     "startDate"
     t.date     "endDate"
     t.date     "realEndDate"
-    t.boolean  "isValid",     :default => true
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "isValid",          :default => true
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.integer  "project_level_id"
   end
 
   create_table "users", :force => true do |t|
