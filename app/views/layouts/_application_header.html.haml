@@ -4,6 +4,14 @@
       %a(class="brand" href="#") Jenkins Asia
       .nav-collapse.collapse.navbar-responsive-collapse
         %ul.nav.pull-right
+          / Project Menu
+          %li
+            %a( href=projects_path 
+                rel="tooltip"
+                data-original-title="Project"
+                data-placement="bottom"
+              )
+              %i.icon-barcode
           / Setting
           %li.dropdown
             %a( class="dropdown-toggle" 

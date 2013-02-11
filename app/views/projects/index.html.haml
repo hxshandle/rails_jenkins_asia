@@ -1,33 +1,40 @@
-%h1 Listing projects
+.container-fluid
+  .row-fluid
+    / My Projects Tab
+    .tabbable.tabs-left
+      %ul.nav.nav-tabs
+        %li.active
+          %a(href="#tab-my-projects" data-toggle="tab") My Projects
+      .tab-content
+        .tab-pane.active#tab-my-projects
+          
+          %table.table.table-striped.table-hover.talbe-condensed
+            %tr
+              %th Name
+              %th Description
+              %th Projectno
+              %th Targetfob
+              %th Startdate
+              %th Enddate
+              %th Realenddate
+              %th Isvalid
+              %th
+              %th
+              %th
 
-%table
-  %tr
-    %th Name
-    %th Description
-    %th Projectno
-    %th Targetfob
-    %th Startdate
-    %th Enddate
-    %th Realenddate
-    %th Isvalid
-    %th
-    %th
-    %th
+            - @projects.each do |project|
+              %tr
+                %td= project.name
+                %td= project.description
+                %td= project.projectNo
+                %td= project.targetfob
+                %td= project.startDate
+                %td= project.endDate
+                %td= project.realEndDate
+                %td= project.isValid
+                %td= link_to 'Show', project
+                %td= link_to 'Edit', edit_project_path(project)
+                %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
 
-  - @projects.each do |project|
-    %tr
-      %td= project.name
-      %td= project.description
-      %td= project.projectNo
-      %td= project.targetfob
-      %td= project.startDate
-      %td= project.endDate
-      %td= project.realEndDate
-      %td= project.isValid
-      %td= link_to 'Show', project
-      %td= link_to 'Edit', edit_project_path(project)
-      %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
-
-%br
-
-= link_to 'New Project', new_project_path
+          %br
+          = link_to 'New Project', new_project_path

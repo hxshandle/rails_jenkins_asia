@@ -1,4 +1,7 @@
 class ProjectsController < ApplicationController
+  load_and_authorize_resource
+  #devise authorition
+  before_filter :authenticate_user!
   # GET /projects
   # GET /projects.json
   def index
