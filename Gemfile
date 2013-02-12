@@ -7,6 +7,8 @@ gem 'rails', '3.2.3'
 
 gem 'sqlite3'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
 #bootstrap
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'

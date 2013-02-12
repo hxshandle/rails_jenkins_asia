@@ -19,7 +19,11 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe ProjectsController do
-
+  before :each do
+    @user = FactoryGirl.create(:user)
+    @request.env['devise.mapping'] = :user
+    sign_in @user
+  end
   # This should return the minimal set of attributes required to create a valid
   # Project. As you add validations to Project, be sure to
   # update the return value of this method accordingly.

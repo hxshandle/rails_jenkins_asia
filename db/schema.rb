@@ -11,15 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210081122) do
+ActiveRecord::Schema.define(:version => 20130211074148) do
 
   create_table "currencies", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "project_levels", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -33,10 +27,10 @@ ActiveRecord::Schema.define(:version => 20130210081122) do
     t.date     "startDate"
     t.date     "endDate"
     t.date     "realEndDate"
-    t.boolean  "isValid",          :default => true
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.integer  "project_level_id"
+    t.boolean  "isValid",       :default => true
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
+    t.string   "project_level", :default => "All New"
   end
 
   create_table "users", :force => true do |t|

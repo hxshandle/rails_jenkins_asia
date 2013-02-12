@@ -7,24 +7,32 @@
           %a(href="#tab-my-projects" data-toggle="tab") My Projects
       .tab-content
         .tab-pane.active#tab-my-projects
-          
+          / New project button
+          = button_to 'New Project',
+                      new_project_path, 
+                      form:{"data-replace" => "#new-project"}, 
+                      method:"get", 
+                      remote:true, 
+                      class:"btn btn-success"
+          #new-project
+          / List table of projects
           %table.table.table-striped.table-hover.talbe-condensed
             %tr
-              %th Name
-              %th Description
-              %th Projectno
-              %th Targetfob
-              %th Startdate
-              %th Enddate
-              %th Realenddate
-              %th Isvalid
+              %th=t "projects.name"
+              %th=t "projects.description"
+              %th=t "projects.projectNo"
+              %th=t "projects.targetfob"
+              %th=t "projects.startDate"
+              %th=t "projects.endDate"
+              %th=t "projects.realEndDate"
+              %th=t "isValid"
               %th
               %th
               %th
 
             - @projects.each do |project|
               %tr
-                %td= project.name
+                %td= link_to project.name, project
                 %td= project.description
                 %td= project.projectNo
                 %td= project.targetfob
@@ -35,6 +43,4 @@
                 %td= link_to 'Show', project
                 %td= link_to 'Edit', edit_project_path(project)
                 %td= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }
-
-          %br
-          = link_to 'New Project', new_project_path
+          

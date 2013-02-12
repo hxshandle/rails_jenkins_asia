@@ -30,7 +30,13 @@ class ProjectsController < ApplicationController
     @project = Project.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html do
+        if request.xhr?
+          render :layout => false
+        else
+          render
+        end
+      end
       format.json { render json: @project }
     end
   end

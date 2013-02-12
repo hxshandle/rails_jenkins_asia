@@ -3,3 +3,14 @@
 
 en:
   hello: "Hello world"
+  isValid: "Is Valid"
+  projects:
+      name: "Name"
+      projectno: "Project No"
+      description: "Description"
+      projectNo: "Project No"
+      targetfob: "Target FOB"
+      startDate: "Start Date"
+      endDate: "End Date"
+      realEndDate: "Real End Date"
+

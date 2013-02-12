@@ -2,14 +2,14 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name
-    = f.input :description
-    = f.input :projectNo
-    = f.input :targetfob
-    = f.input :startDate
-    = f.input :endDate
-    = f.input :realEndDate
-    = f.input :isValid
+    = f.input :name, label: t("projects.name")
+    = f.input :description, label: t("projects.description"),input_html: {rows:10}
+    = f.input :projectNo, label: t("projects.projectNo")
+    = f.input :targetfob, label: t("projects.targetfob")
+    = f.input :startDate, label: t("projects.startDate"),:as => :datepicker
+    = f.input :endDate, label: t("projects.endDate"),:as => :datepicker
+    = f.input :realEndDate, label: t("projects.realEndDate"),:as => :datepicker
+    /= f.input :isValid, label: t("isValid")
 
   .form-actions
     = f.button :submit
