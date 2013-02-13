@@ -4,6 +4,10 @@
 en:
   hello: "Hello world"
   isValid: "Is Valid"
+  signIn: "Sign In"
+  placeholder:
+    userName: "User Name"
+    password: "Password"
   projects:
       name: "Name"
       projectno: "Project No"
