@@ -5,9 +5,13 @@ en:
   hello: "Hello world"
   isValid: "Is Valid"
   signIn: "Sign In"
+  login: "Login"
+  rememberMe: "Remember Me"
+  sendMePwd: "Send me reset password instructions"
   placeholder:
     userName: "User Name"
     password: "Password"
+    email: "Email"
   projects:
       name: "Name"
       projectno: "Project No"

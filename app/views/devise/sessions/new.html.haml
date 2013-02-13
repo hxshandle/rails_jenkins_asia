@@ -1,13 +1,26 @@
-.row
+#loginbox
   %h2=t "login"
-  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name),:html => {:class => "form-horizontal"}) do |f|
-    = f.input :name, :placeholder => t("placeholder.userName")
-    = f.input :password, :placeholder => t("placeholder.password")
-    - if devise_mapping.rememberable?
-      = f.input :remember_me, as: :boolean, inline_label: 'Remember me',label: false
+  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name),:html => {:class => "form"}) do |f|
+    = render :partial => "shared/flash_messages", :locals => {:flash => flash}
+    / User Name
     .control-group
       .controls
-        = f.button :submit, "Login"
+        .input-prepend
+          %span.add-on
+            %i.icon-user
+          = f.text_field :name, :placeholder => t("placeholder.userName")
+    / User Password
     .control-group
-      .controls    
-        = render "devise/shared/links"
+      .controls
+        .input-prepend
+          %span.add-on
+            %i.icon-lock
+          = f.password_field :password, :placeholder => t("placeholder.password")
+    - if devise_mapping.rememberable?
+      = f.input :remember_me, as: :boolean, inline_label: t("rememberMe"),label: false
+    / Form Action
+    .form-actions
+      %span.pull-left
+        = link_to "Forgot your password?", new_password_path(resource_name)
+      %span.pull-right
+        = f.button :submit, "Login"

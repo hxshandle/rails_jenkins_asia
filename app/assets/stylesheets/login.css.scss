@@ -1,0 +1,25 @@
+#loginbox{
+  display: table;
+  width: 400px;
+  margin: 0 auto;
+  border-radius: 7px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 0 15px #000000;
+  top: 100px;
+  position: relative;
+  z-index: 99;
+
+  form {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0px;
+    label.checkbox{
+      text-align: left;
+      padding-left: 95px;
+    }
+    .form-actions {
+      margin-bottom: 0px;
+    }
+  }
+}
