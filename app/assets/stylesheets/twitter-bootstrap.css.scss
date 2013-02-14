@@ -9,3 +9,10 @@ html{
     }
   }
 }
+.ui-pnotify{
+  .alert{
+    // Fix pnotify close button's position which impacted by bootstrap's alert
+    padding:8px 14px;
+    margin-bottom:0px;
+  }
+}

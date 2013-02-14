@@ -68,6 +68,7 @@ border-top-left-radius: 0;
 border-top-right-radius: 0;
 /* Ensures history container is above notices. */
 z-index: 10000;
+text-align: center;
 }
 .ui-pnotify-history-container .ui-pnotify-history-header {
 padding: 2px;

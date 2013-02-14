@@ -1,11 +1,13 @@
 var Utils = {
+  /**
+  * Initlizate
+  */
   initlizate:function(root){
     root == root || document;
     $("a[rel=popover]",root).popover();
     $(".tooltip",root).tooltip();
     $("a[rel=tooltip]",root).tooltip();
-    $(".alert-message",root).alert();
-    //for all datepicker field
+    // For all datepicker field
     $("input.datepicker",root).each(function(){
       $(this).datepicker({
         altFormat: "yy-mm-dd",
@@ -13,14 +15,29 @@ var Utils = {
         altField: $(this).next()
       });
     });
+  },
+  /**
+  * Notify utils
+  */
+  pnotify:function(title,text,type){
+    $.pnotify({
+      title: title,
+      text:  text,
+      type:  type,
+      sticker: false,
+      history:false,
+      animate_speed:'normal'
+    });
   }
 
 };
 
 
+
 // Provide HTML element replacement for data-remote ajax calls
 $(function() {
   Utils.initlizate();
+  // Reinitlizate for ajax HTML content
   $('[data-remote][data-replace]')
     .data('type', 'html')
     .on('ajax:success', function(event, data) {
@@ -33,3 +50,11 @@ $(function() {
       Utils.initlizate($this.data('replace'));
     });
 });
+
+// Flash message nofitication processor
+$(function(){
+  $('#flash-message p').each(function(){
+    var $this = $(this);
+    Utils.pnotify($this.attr('class'),$this.text().replace(/\n/g,''),$this.attr('class'));
+  });
+}); 
