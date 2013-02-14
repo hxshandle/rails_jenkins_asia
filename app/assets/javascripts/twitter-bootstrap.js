@@ -4,6 +4,7 @@ var Utils = {
     $("a[rel=popover]",root).popover();
     $(".tooltip",root).tooltip();
     $("a[rel=tooltip]",root).tooltip();
+    $(".alert-message",root).alert();
     //for all datepicker field
     $("input.datepicker",root).each(function(){
       $(this).datepicker({
