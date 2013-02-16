@@ -1,18 +1,24 @@
 RailsJenkinsAisa::Application.routes.draw do
+  root :to => 'home#index'
+  match "index", :to => 'home#index'
+  namespace :admin do
+    resource :account,:controller => "account" do
+      collection do
+        get :index
+      end
+    end
+  end
+
   resources :projects
 
   get "users/index"
-
   get "users/show"
+  get "account/index"
 
   authenticated :user do
     root :to => 'home#index'
   end
   
-  root :to => 'home#index'
-
-  match "index", :to => 'home#index'
-
   devise_for :users
   resources :users
 
