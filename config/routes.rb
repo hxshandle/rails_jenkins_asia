@@ -1,25 +1,16 @@
 RailsJenkinsAisa::Application.routes.draw do
   root :to => 'home#index'
   match "index", :to => 'home#index'
-  namespace :admin do
-    resource :account,:controller => "account" do
-      collection do
-        get :index
-      end
-    end
-  end
+
 
   resources :projects
-
-  get "users/index"
-  get "users/show"
-  get "account/index"
 
   authenticated :user do
     root :to => 'home#index'
   end
   
-  devise_for :users
+  devise_for :users,:path => :account,:controllers => { :registrations => "admin/registration" }
+
   resources :users
 
   # The priority is based upon order of creation:

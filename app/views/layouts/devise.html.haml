@@ -6,5 +6,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    = yield
+    / Devise Layout
+    = yield      
+    = debug(params) if Rails.env.development?
 
