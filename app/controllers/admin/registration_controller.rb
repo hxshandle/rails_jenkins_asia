@@ -6,5 +6,9 @@ class Admin::RegistrationController < Devise::RegistrationsController
   before_filter :authenticate_user!
   layout "application"
   def new
+    super
+  end
+  def create
+    super
   end
 end

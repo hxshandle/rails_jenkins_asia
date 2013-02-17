@@ -8,6 +8,7 @@ en:
   login: "Login"
   rememberMe: "Remember Me"
   sendMePwd: "Send me reset password instructions"
+  registrationNew: "Registrate a new account"
   placeholder:
     userName: "User Name"
     password: "Password"
