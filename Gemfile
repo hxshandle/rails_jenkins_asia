@@ -6,13 +6,16 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+#CSS Framework
+gem 'compass'
+
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 
 #bootstrap
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
-
+#Image upload
 gem "paperclip", "~> 3.0"
 
 # Form
@@ -46,6 +49,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
+  gem 'compass-rails'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby

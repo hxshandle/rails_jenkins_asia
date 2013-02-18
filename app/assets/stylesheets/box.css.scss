@@ -1,10 +1,22 @@
 
+@import "compass";
 $box-background-color:#F1F1F1;
 $border-radius:5px;
+$padding-left:16px;
+
+.tab-header{
+  font-size: 16px;
+  font-weight: bold;
+  height: 32px;
+  line-height: 32px;
+  padding-left: $padding-left;
+  @include border-top-radius($border-radius);
+}
+
 
 .box{
   background: none repeat scroll 0 0 $box-background-color;
-  border-radius: $border-radius;
+  @include border-radius($border-radius);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
   // tab-header
@@ -12,7 +24,8 @@ $border-radius:5px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: #CCCCCC;
-    background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
+    @include border-top-radius($border-radius);
+    @include background-image(linear-gradient(center top , #EEEEEE, #CCCCCC));
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat;
@@ -20,5 +33,10 @@ $border-radius:5px;
     border-bottom: 1px solid #F8F8F8;
     color: #666666;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  }
+
+  > form .form-actions{
+    @include border-bottom-radius($border-radius);
+    margin-bottom:0px;
   }
 }
