@@ -1,0 +1,24 @@
+
+$box-background-color:#F1F1F1;
+$border-radius:5px;
+
+.box{
+  background: none repeat scroll 0 0 $box-background-color;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+  // tab-header
+  .tab-header{
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #CCCCCC;
+    background-image: -moz-linear-gradient(center top , #EEEEEE, #CCCCCC);
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: 100% auto;
+    border-bottom: 1px solid #F8F8F8;
+    color: #666666;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+  }
+}

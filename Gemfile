@@ -13,6 +13,8 @@ gem 'jquery-ui-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 
+gem "paperclip", "~> 3.0"
+
 # Form
 gem 'simple_form'
 
