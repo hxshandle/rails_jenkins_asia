@@ -23,6 +23,8 @@
               %i.icon-cog
             %ul.dropdown-menu
               %li
+                = link_to t("accountMgr"), admin_account_path
+              %li
                 = link_to t("registrationNew"), new_user_registration_path
           / Sign out
           %li

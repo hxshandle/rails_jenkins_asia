@@ -2,9 +2,13 @@
 @import "font-awesome";
 @import "compass";
 
+$main-container-color:#ffffff;
 //Commons
 .padded{
   padding:16px;
+}
+.padded-except-bottom{
+  padding:16px 16px 0;
 }
 
 html{
@@ -14,6 +18,7 @@ html{
     @include background(image-url("linen-lighter.png"));
     > .container{
       padding-top:60px;
+      background-color:$main-container-color;
     }
   }
 }
@@ -22,5 +27,13 @@ html{
     // Fix pnotify close button's position which impacted by bootstrap's alert
     padding:8px 14px;
     margin-bottom:0px;
+  }
+}
+
+form.fill-up{
+  input{
+    width:100%;
+    @include box-sizing(border-box);
+    height:30px;
   }
 }

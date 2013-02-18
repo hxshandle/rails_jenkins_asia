@@ -35,8 +35,13 @@ $padding-left:16px;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   }
 
-  > form .form-actions{
-    @include border-bottom-radius($border-radius);
-    margin-bottom:0px;
+  form{
+    margin:0;
+
+    .form-actions{
+      @include border-bottom-radius($border-radius);
+      margin:0px;
+    }
   }
+
 }

@@ -1,0 +1,11 @@
+= simple_form_for(@user, :as => :user, :url => registration_path(:user),:html => {:class => "fill-up","data-remote"=>"true"},:defaults=>{label:false}) do |f|
+  .row-fluid
+    .padded-except-bottom
+      =f.input :name,:autofocus => true,:placeholder=>t("userName")
+      =f.input :email,:placeholder=>t("email")
+      =f.input :password,:placeholder=>t("password")
+      =f.input :password_confirmation,:placeholder=>t("passwordConfirm")
+  .form-actions  
+    %span.pull-right
+      %button{:type=>"submit"}=t("createUser")
+      %button{:type=>"reset"}=t("reset")

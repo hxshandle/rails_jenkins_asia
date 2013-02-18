@@ -8,14 +8,14 @@
         .input-prepend
           %span.add-on
             %i.icon-user
-          = f.text_field :name, :placeholder => t("placeholder.userName")
+          = f.text_field :name, :placeholder => t("userName")
     / User Password
     .control-group
       .controls
         .input-prepend
           %span.add-on
             %i.icon-lock
-          = f.password_field :password, :placeholder => t("placeholder.password")
+          = f.password_field :password, :placeholder => t("password")
     - if devise_mapping.rememberable?
       = f.input :remember_me, as: :boolean, inline_label: t("rememberMe"),label: false
     / Form Action
