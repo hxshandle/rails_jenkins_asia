@@ -29,6 +29,7 @@ gem 'cancan'
 
 group :development do
   gem 'haml-rails'
+  gem 'zeus'
 end
 
 group :development,:test do
