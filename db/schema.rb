@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211074148) do
+ActiveRecord::Schema.define(:version => 20130219084915) do
+
+  create_table "avatars", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "logo_file_name"
+    t.string   "logo_content_type"
+    t.integer  "logo_file_size"
+    t.datetime "logo_updated_at"
+    t.boolean  "active",            :default => true
+  end
+
+  add_index "avatars", ["user_id"], :name => "index_avatars_on_user_id"
 
   create_table "currencies", :force => true do |t|
     t.string   "name"
@@ -47,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130211074148) do
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
     t.string   "name"
+    t.string   "role"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

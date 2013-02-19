@@ -36,4 +36,7 @@ form.fill-up{
     @include box-sizing(border-box);
     height:30px;
   }
+  select{
+    width: 100%;
+  }
 }
