@@ -6,7 +6,7 @@
       =f.input :password,:placeholder=>t("password")
       =f.input :password_confirmation,:placeholder=>t("passwordConfirm")
       =f.input :role,:collection => User::ROLES
-  .form-actions  
+  .form-actions
     %span.pull-right
       %button{:type=>"submit"}=t("createUser")
       %button{:type=>"reset"}=t("reset")
