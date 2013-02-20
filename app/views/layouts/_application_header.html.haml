@@ -1,7 +1,9 @@
 .navbar.navbar-fixed-top
   .navbar-inner
     .container
-      %a(class="brand" href="#") Jenkins Asia
+      %a(class="brand" href="#")
+        Jenkins-Asia&nbsp|
+        %span=yield(:sitemap)
       .nav-collapse.collapse.navbar-responsive-collapse
         %ul.nav.pull-right
           / Project Menu
