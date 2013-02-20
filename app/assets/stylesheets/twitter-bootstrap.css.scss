@@ -29,7 +29,6 @@ html{
     margin-bottom:0px;
   }
 }
-
 form.fill-up{
   input{
     width:100%;
@@ -38,5 +37,18 @@ form.fill-up{
   }
   select{
     width: 100%;
+  }
+  .chzn-container-single .chzn-single{
+    height: 30px;
+    line-height: 29px;
+    div b{
+      background: url("chosen-sprite.png") no-repeat scroll 0 6px transparent;
+    }
+  }
+  .chzn-container-active .chzn-container-single-with-drop div b{
+    background-position: -18px 6px;
+  }
+  .chzn-search > input{
+    width: 100%!important;
   }
 }

@@ -7,6 +7,7 @@ var Utils = {
     $("a[rel=popover]",root).popover();
     $(".tooltip",root).tooltip();
     $("a[rel=tooltip]",root).tooltip();
+    $('.chzn-select').chosen();
     // For all datepicker field
     $("input.datepicker",root).each(function(){
       $(this).datepicker({
