@@ -42,7 +42,7 @@ end
 group :test do
   gem 'database_cleaner'
   gem 'email_spec'
-  gem 'capybara','>=1.1.2'
+  gem 'capybara','>=2.0.0'
   gem "launchy"
 end
 

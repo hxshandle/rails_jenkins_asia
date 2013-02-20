@@ -6,6 +6,7 @@ FactoryGirl.define do
     email 'example@example.com'
     password '!qaz2wsx'
     password_confirmation '!qaz2wsx'
+    role 'managerLv1'
     # required if the Devise Confirmable module is used
     # confirmed_at Time.now
   end

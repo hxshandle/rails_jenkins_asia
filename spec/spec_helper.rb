@@ -56,3 +56,11 @@ RSpec.configure do |config|
   config.include(EmailSpec::Helpers)
   config.include(EmailSpec::Matchers)
 end
+
+def login_as_mgrlv1
+  @loginUser = FactoryGirl.create(:user)
+  visit new_user_session_path
+  fill_in 'user_name', :with =>@loginUser.name
+  fill_in 'user_password', :with =>@loginUser.password
+  click_button 'Login'
+end
