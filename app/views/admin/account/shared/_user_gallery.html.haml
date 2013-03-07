@@ -1,0 +1,12 @@
+.box.span8
+  .tab-header=t(:user_gallery)
+  .padded.max-height400
+    .row-fluid
+      %ul.thumbnails.user-gallery-thumbnails
+        - @users.each do |user|
+          %li.span3
+            .thumbnail
+              = image_tag "no-avatar.jpeg"
+              .quick-card
+                %span.role=t user.role
+                %span.name= link_to user.name, user

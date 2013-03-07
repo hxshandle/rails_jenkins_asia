@@ -5,7 +5,8 @@
       =f.input :email,:placeholder=>t("email")
       =f.input :password,:placeholder=>t("password")
       =f.input :password_confirmation,:placeholder=>t("passwordConfirm")
-      =f.input :role,:collection => User::ROLES,:input_html => {class:'chzn-select'},:placeholder=>t("pleaseSelectRole")
+      =f.input :role,:collection => User::ROLES,:input_html => {class:'chzn-select'},
+      :placeholder=>t("pleaseSelectRole")
   .form-actions  
     %span.pull-right
       %button{:type=>"submit"}=t("createUser")

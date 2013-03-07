@@ -2,11 +2,8 @@
 .container-fluid
   .row-fluid
     / User list
-    .box.span8
-      .tab-header Users
-      .padded
-        - @users.each do |user|
-          %p= link_to user.name, user
+    #user-gallery
+      = render 'admin/account/shared/user_gallery'
     .box.span4
       .tab-header=t("registrationNew")
       =render "new_account_form"

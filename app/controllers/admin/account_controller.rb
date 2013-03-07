@@ -7,4 +7,16 @@ class Admin::AccountController < ApplicationController
     @users = User.all
     @user = User.new
   end
+
+  def user_gallery
+    @users = User.all
+    respond_to do |format|
+      format.html do
+        if request.xhr?
+          render :layout => false
+        end
+      end
+      format.json { render json: @users }
+    end
+  end
 end

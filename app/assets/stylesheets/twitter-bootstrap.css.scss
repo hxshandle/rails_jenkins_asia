@@ -17,6 +17,11 @@ $main-container-color:#ffffff;
   }
 }
 
+.max-height400{
+  max-height: 400px;
+  overflow: auto;
+}
+
 html{
   height:100%;
   body{

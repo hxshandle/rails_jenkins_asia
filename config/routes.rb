@@ -12,6 +12,7 @@ RailsJenkinsAisa::Application.routes.draw do
   end
   namespace :admin do
     match "account" => "account#index", :as => :account
+    match "user_gallery" => "account#user_gallery", :as => :user_gallery
   end
   devise_for :users,:path => :account,:controllers => { :registrations => "admin/registration" }
   resources :users

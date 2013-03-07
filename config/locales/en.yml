@@ -17,6 +17,7 @@ en:
   email: "Email"
   passwordConfirm: "Password Confirmation"
   pleaseSelectRole: "Please select a role"
+  userGallery: User Gallery
   projects:
     name: "Name"
     projectno: "Project No"

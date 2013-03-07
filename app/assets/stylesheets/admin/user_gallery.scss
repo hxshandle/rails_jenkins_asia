@@ -1,0 +1,16 @@
+@import "compass";
+.user-gallery-thumbnails{
+  li:nth-child(4n+1){
+    margin-left:0px;
+  }
+  .quick-card{
+    span{
+      display: block;
+      text-align: center;
+    }
+    .role{
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+}
