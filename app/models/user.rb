@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
+  has_one :user_profile
 
   def admin?
     1 == 1

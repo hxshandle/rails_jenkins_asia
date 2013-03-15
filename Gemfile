@@ -44,6 +44,7 @@ group :test do
   gem 'email_spec'
   gem 'capybara','>=2.0.0'
   gem "launchy"
+  gem 'cucumber'
 end
 
 # Gems used only for assets and not required
