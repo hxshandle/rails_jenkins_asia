@@ -18,6 +18,7 @@ Then /^Should on "([^"]*)" page$/ do |arg|
 end
 When /^Fill in account info$/ do
   new_user = FactoryGirl.build(:user)
+  page.execute_script("$('#user_role').show()")
   new_user.name = 'newFish'
   new_user.email = 'newFils@example.com'
   new_user.password = 'fdsda2131'
@@ -25,6 +26,7 @@ When /^Fill in account info$/ do
   fill_in(:user_password,:with => new_user.password)
   fill_in(:user_email,:with => new_user.email)
   fill_in(:user_password_confirmation,:with => new_user.password)
+
   select('staff',:from => :user_role)
 end
 Then /^Page should contain new user named "([^"]*)"$/ do |name|

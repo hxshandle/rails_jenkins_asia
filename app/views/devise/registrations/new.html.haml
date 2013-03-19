@@ -1,14 +1,12 @@
-.box
-  .tab-header Sign Up
-  = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name),:html => {:class => "form-horizontal"}) do |f|
+#loginbox
+  %h2=t "login"
+  = simple_form_for(@user, :as => :user, :url => registration_path(:user),:html => {:class => "fill-up","data-remote"=>"true"},:defaults=>{label:false}) do |f|
     .row-fluid
-      .padded
-        = devise_error_messages!
-        =f.input :name,:autofocus => true
-        =f.input :email
-        =f.input :password
-        =f.input :password_confirmation
+      .padded-except-bottom
+        =f.input :email,:placeholder=>t("email")
+        =f.input :password,:placeholder=>t("password")
+        =f.input :password_confirmation,:placeholder=>t("passwordConfirm")
     .form-actions  
-      %div= f.submit "Sign up"
-
-= render "devise/shared/links"
+      %span.pull-right
+        %button{:type=>"submit"}=t("createUser")
+        %button{:type=>"reset"}=t("reset")

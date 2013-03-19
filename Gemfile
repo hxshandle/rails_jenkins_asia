@@ -45,6 +45,7 @@ group :test do
   gem 'capybara','>=2.0.0'
   gem "launchy"
   gem 'cucumber'
+  gem 'selenium-webdriver', '2.30.0'
 end
 
 # Gems used only for assets and not required

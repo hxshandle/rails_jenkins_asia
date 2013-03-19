@@ -16,5 +16,10 @@ Feature: Account
     And Fill in account info
     And click on "Create User"
     And Sleep 5 seconds
+    Then Page should contain new user named "newfish"
 
-    Then Page should contain new user named "newFish"
+  @javascript
+  Scenario: Go to user profile
+    Given on "admin_account_path" page
+    And click on "Test_User"
+    Then Should on "user_profile_show_path" page

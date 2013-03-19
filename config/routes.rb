@@ -1,6 +1,6 @@
 RailsJenkinsAisa::Application.routes.draw do
 
-  get "user_profile/show"
+  get "user_profile/show/:id" => "user_profile#show", :as => :user_profile_show
 
   root :to => 'home#index'
   match "index", :to => 'home#index'

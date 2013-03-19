@@ -9,4 +9,4 @@
               = image_tag "no-avatar.jpeg"
               .quick-card
                 %span.role=t user.role
-                %span.name= link_to user.name, user
+                %span.name= link_to user.name, user_profile_show_path(user), :id => user.name
