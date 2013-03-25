@@ -21,5 +21,5 @@ Feature: Account
   @javascript
   Scenario: Go to user profile
     Given on "admin_account_path" page
-    And click on "Test_User"
+    And click on "test_user"
     Then Should on "user_profile_show_path" page

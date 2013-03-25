@@ -10,6 +10,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password,:role, :password_confirmation, :remember_me
   # attr_accessible :title, :body
 
+  after_create :create_user_profile
+
   validates_presence_of :name
   validates_uniqueness_of :name, :email, :case_sensitive => false
   has_one :user_profile
@@ -17,4 +19,5 @@ class User < ActiveRecord::Base
   def admin?
     1 == 1
   end
+
 end
