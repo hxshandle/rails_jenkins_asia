@@ -1,0 +1,14 @@
+
+@import "variable.css.scss";
+@media screen {
+  // for dev
+  #main{
+    padding-top:$left-size-bar-top;
+
+  #content{
+    height:2000px;
+    margin-left:100px;
+    border-left:1px solid $border-color;
+  }
+  }
+}

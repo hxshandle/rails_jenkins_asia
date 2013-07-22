@@ -1,0 +1,50 @@
+@import "variable.css.scss";
+
+@media screen {
+  #left-side-bar {
+    top: $left-size-bar-top;
+    >ul {
+      margin: 0;
+      padding: 0;
+      margin-left: -$padding-value;
+      width: 120px;
+      color: $menu-font-color;
+      text-align: center;
+      background:#f1f1f1;
+      li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        //border-top: 1px solid #555555;
+        //border-bottom:1px solid #2e2e2e;
+
+        &.active {
+          color: $menu-font-color-active;
+        }
+
+        a {
+          display: block;
+          color:$menu-font-color;
+          text-decoration: none;
+          padding:14px 0 8px 0;
+          cursor:pointer;
+          i{
+            font-size:2em;
+          }
+          span {
+            display: block;
+          }
+          &:hover{
+            color:$menu-font-color-active;
+          }
+        }
+      }
+      .avatar {
+        width: 100%;
+        position: relative;
+        padding-top: $padding-value;
+
+      }
+    }
+  }
+}

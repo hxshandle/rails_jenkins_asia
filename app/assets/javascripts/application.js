@@ -14,4 +14,14 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require bootstrap
+//= require handlebars
+//= require underscore
+//= require backbone
+//= require rails_jenkins_aisa
+//= require_tree ../templates
+//= require plugin
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree .

@@ -1,11 +1,48 @@
 @import "bootstrap";
 @import "font-awesome";
+<<<<<<< HEAD
 html{
   height:100%;
   body{
     height: 100%;
     > .container{
       padding-top:60px;
+=======
+@import "compass";
+@import "variable.css.scss";
+
+//Commons
+.padded{
+  padding:$padding-value;
+}
+.padded-except-bottom{
+  padding:16px 16px 0;
+}
+.navbar .brand{
+  font-weight: bold;
+  span{
+    font-size: 16px;
+  }
+}
+
+.max-height400{
+  max-height: 400px;
+  overflow: auto;
+}
+
+html{
+  height:100%;
+  body{
+    height: 300%;
+    font-size:$font-size;
+    //@include background(image-url("linen-lighter.png"));
+    #main{
+      @extend .padded;
+      margin:0;
+      position:relative;
+      background-color:$main-container-color;
+      padding-top:$left-size-bar-top;
+>>>>>>> bf244e8... new ui
     }
   }
 }
