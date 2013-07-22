@@ -1,13 +1,5 @@
 @import "bootstrap";
 @import "font-awesome";
-<<<<<<< HEAD
-html{
-  height:100%;
-  body{
-    height: 100%;
-    > .container{
-      padding-top:60px;
-=======
 @import "compass";
 @import "variable.css.scss";
 
@@ -42,7 +34,6 @@ html{
       position:relative;
       background-color:$main-container-color;
       padding-top:$left-size-bar-top;
->>>>>>> bf244e8... new ui
     }
   }
 }

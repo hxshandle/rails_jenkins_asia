@@ -5,13 +5,9 @@ RailsJenkinsAisa::Application.routes.draw do
 
   get "users/show"
 
-  authenticated :user do
-    root :to => 'home#index'
-  end
-  
   root :to => 'home#index'
 
-  match "index", :to => 'home#index'
+  get "index", :to => 'home#index'
 
   devise_for :users
   resources :users
