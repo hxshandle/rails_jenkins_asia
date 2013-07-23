@@ -1,15 +1,26 @@
 _R.Routers.Router = Backbone.Router.extend({
-  routes:{
-    "":"index",
-    "projects":"projects"
+  routes: {
+    "": "index",
+    "projects": "projects"
   },
-  index:function(){
+  _currentView: null,
+  _clearCurrentView: function () {
+    if (this._currentView){
+      this._currentView.remove();
+    }
+  },
+  index: function () {
     console.log("index page");
     var _app = new _R.Views.App();
+    this._clearCurrentView();
     var _dashboard = new _R.Views.Dashboard();
+    this._currentView = _dashboard;
   },
-  projects:function(){
+  projects: function () {
     console.log("projects page");
-    var projectPage = new _R.Views.Projects();
+    this._clearCurrentView();
+    var projectView = new _R.Views.Projects();
+    this._currentView = projectView;
+
   }
 });

@@ -7,13 +7,14 @@
  */
 
 _R.Views.BaseView = Backbone.View.extend({
-  initialize:function(){
+  _rootElement: $("#content"),
+  initialize: function () {
     this.render();
   },
 
   render: function () {
     if (this.template) {
-      this.$el.append(this._renderTemplate());
+      this._rootElement.append(this.$el.append(this._renderTemplate()));
     }
     return this;
   },
@@ -34,8 +35,8 @@ _R.Views.BaseView = Backbone.View.extend({
    */
   _renderTemplate: function () {
     var tpl = HandlebarsTemplates[this.template];
-    if(!tpl){
-      alert("Template :" + this.template +"is not found");
+    if (!tpl) {
+      alert("Template :" + this.template + "is not found");
     }
     var _context = this.renderContext || {};
     var _options = this.renderOptions || {};

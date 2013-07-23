@@ -1,5 +1,5 @@
 _R.Views.Projects = _R.Views.BaseView.extend({
-  el:$("#content"),
+  id:"project-page",
   template:"projects/projects",
   initialize:function(){
     this.model = new _R.Models.Projects();
